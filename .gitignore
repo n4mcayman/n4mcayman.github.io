@@ -1,0 +1,12 @@
+# Downloaded documents and their text: re-fetched or restored from the Actions cache, never committed
+data/raw/
+data/text/
+logs/
+qc/
+# Built output: GitHub Actions builds and publishes it
+site/
+qa/out/
+__pycache__/
+*.part
+# editor and tool temp copies such as watch.py.tmp.12345.abcdef
+*.tmp.*

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Page not found · n4m cayman</title><meta name="n4m-retired" content="not-found"><meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark"><link rel="icon" href="/icons/icon-192.png">
+<link rel="stylesheet" href="/launch.css"><link rel="stylesheet" href="/broadcast.css"></head>
+<body data-page="not-found"><div class="sheet"><header class="sheet-mast"><a class="wordmark brand-mark" href="/" aria-label="n4m cayman"><span class="brand-name">n<span class="brand-four">4</span>m</span><span class="brand-place">cayman</span></a></header>
+<main id="main"><header class="page-lead"><h1>That page is not here</h1>
+<p class="deck" id="why" role="status">The address may be mistyped, or the page may have been part of an older edition.</p></header>
+<p><a class="action-link" id="next" href="/briefing/">See what is listed today</a></p>
+</main></div>
+<script>
+(async () => {
+  const m = location.pathname.match(/^\/editions\/(\d{4})-(\d{2})-(\d{2})\/([a-z-]+)\/(?:([A-Za-z0-9_-]+)\/)?/);
+  if (!m) return;
+  const old = m[1] + '-' + m[2] + '-' + m[3], kind = m[4], id = m[5];
+  const what = { jobs: ['a job post or the jobs list', '/jobs/', "See today's job posts"],
+                 planning: ['a planning record', '/nearby/', "See today's planning records"],
+                 nearby: ['the planning list', '/nearby/', "See today's planning records"],
+                 items: ['a notice', '/briefing/', 'See what is listed today'] }[kind] || ['a page', '/briefing/', 'See what is listed today'];
+  if (id && ['items', 'jobs', 'planning'].includes(kind)) {
+    try {
+      const list = await (await fetch('/editions/index.json', { cache: 'no-store' })).json();
+      const newest = list.map(e => String(e.edition)).filter(e => /^\d{4}-\d{2}-\d{2}$/.test(e)).sort().pop();
+      if (newest && newest !== old) {
+        const url = '/editions/' + newest + '/' + kind + '/' + id + '/';
+        if ((await fetch(url, { method: 'HEAD' })).ok) { location.replace(url); return; }
+      }
+    } catch (error) {}
+  }
+  const when = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3])).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  document.getElementById('why').textContent = 'This was ' + what[0] + ' from the n4m cayman edition of ' + when +
+    '. Older editions are kept online for a limited time, and it is not listed today, so it has most likely closed or ended. Nothing is wrong with your link.';
+  const next = document.getElementById('next'); next.href = what[1]; next.textContent = what[2];
+})();
+</script></body></html>

@@ -1,0 +1,435 @@
+{
+ "schema": 1,
+ "brand": "n4m cayman",
+ "generated": "2026-10-10T07:39:02.259520-05:00",
+ "topics": {
+  "free": {
+   "slides": [
+    {
+     "headline": "Free shuttle now links East End and North Side",
+     "value": "Free",
+     "value_prefix": "",
+     "label": "The Eastern Link is a free four-month public transport pilot that started 1 October. It runs Monday to Saturday, 7:30 am to 7:30 pm, not on public holidays. If you transfer to an existing public bus, the normal bus fare applies.",
+     "source_url": "https://www.radiocayman.gov.ky/news/the-eastern-link-connecting-east-end-and-north-side-to-launch-1-october",
+     "source_label": "Radio Cayman (Government): The Eastern Link Connecting East End and North Side to Launch 1 October",
+     "source_date": "Published 29 Sep 2026",
+     "target_url": "/editions/2026-10-10/items/notice-e757c8e93cb0e745c3a2/",
+     "qualification": "The release names three services and Frank Sound Junction as the connection to existing buses; stop lists were attachments not shown on the page. No end date is given beyond four months. The four-month duration is stated, but an exact end date is not supplied."
+    }
+   ],
+   "seconds_per_slide": 6,
+   "duration": 6
+  },
+  "opportunities": {
+   "slides": [
+    {
+     "headline": "Electricity fuel-charge cap and fuel duty waiver now run to 31 December",
+     "value": "31 Dec 2026",
+     "value_prefix": "",
+     "label": "Government extended the 2026 Fuel Relief Programme by three months. The residential electricity fuel charge stays capped at CI$0.18 per kWh, and the 100% import-duty waiver on gasoline, diesel and propane continues.",
+     "source_url": "https://www.radiocayman.gov.ky/news/government-extends-fuel-relief-programme-through-december-2026",
+     "source_label": "Radio Cayman (Government): Government extends fuel relief programme through December 2026",
+     "source_date": "Published 29 Sep 2026",
+     "target_url": "/editions/2026-10-10/items/notice-d8edb116518bc7c4664c/",
+     "qualification": "The waiver removes the Government duty; it does not set or freeze pump prices. The release's example saving is about $70.44 a month on 1,200 kWh at September's fuel rate."
+    },
+    {
+     "headline": "Duty-free allowance is CI$800 now and CI$1,000 from 23 November",
+     "value": "7 Jan 2027",
+     "value_prefix": "",
+     "label": "The standard allowance for returning residents rose from CI$500 to CI$800 on 1 September. A temporary CI$1,000 allowance applies for Christmas travel, 23 November 2026 to 7 January 2027, then CI$800 resumes on 8 January.",
+     "source_url": "https://gov.ky/w/cabinet-approves-increased-duty-allowances-for-returning-residents",
+     "source_label": "GOV.KY: Cabinet Approves Increased Duty Allowances for Returning Residents",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-8bd6288b9b001acfcf1e/",
+     "qualification": "For the summer window the release said the higher allowance applied at the discretion of Customs and Border Control. Check declaration rules with CBC before you travel."
+    },
+    {
+     "headline": "No-cost mammogram in October for CG BritCay Premier and Provident members",
+     "value": "31 Oct 2026",
+     "value_prefix": "",
+     "label": "The insurer says members of those two plans can get a mammogram at Doctors Hospital with nothing to pay out of pocket during October, without using their annual wellness allowance. Appointments are limited. The booking number is in the insurer's notice; say which plan you are on when you call.",
+     "source_url": "https://www.radiocayman.gov.ky/news/cg-britcay-reintroduces-complimentary-mammogram-initiative-for-breast-cancer-awareness-month-2026",
+     "source_label": "Radio Cayman (Government): CG BritCay reintroduces complimentary mammogram initiative",
+     "source_date": "Published 1 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-1cf107bbc00312edd654/",
+     "qualification": "A company's offer to its own policyholders, carried by Radio Cayman. Listed because it is a benefit members may not know they have; it is not an advertisement or an endorsement."
+    },
+    {
+     "headline": "Local TVET grant guidance",
+     "value": "Check",
+     "value_prefix": "",
+     "label": "The Ministry FAQ says applications may be submitted year-round and decisions are issued quarterly.",
+     "source_url": "https://gov.ky/web/moet/scholarships",
+     "source_label": "Scholarship Secretariat FAQ",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-a4ac7ab9579c1ed47919/",
+     "qualification": "Evergreen guidance, not a dated opening or award guarantee. Confirm current programme rules in the portal."
+    },
+    {
+     "headline": "Check financial assistance requirements",
+     "value": "Check",
+     "value_prefix": "",
+     "label": "Government guidance describes nationality or family-link, residence and household financial tests. Review the requirements before applying.",
+     "source_url": "https://support.gov.ky/hc/en-gb/articles/17307166156813-Am-I-eligible-for-Financial-Assistance",
+     "source_label": "Government financial assistance eligibility",
+     "source_date": "Published 10 Oct 2024",
+     "target_url": "/editions/2026-10-10/items/notice-7faa2c14c9cbbf7ad49c/",
+     "qualification": "Reference updated 10 October 2024; not a finding that you qualify. Household thresholds and the final assessment must be checked with DFA."
+    },
+    {
+     "headline": "Small Business Expo on 21 October",
+     "value": "Check",
+     "value_prefix": "",
+     "label": "CICBD lists the Expo at Hotel Indigo Grand Cayman and links attendee registration.",
+     "source_url": "https://www.cicbd.gov.ky/expo",
+     "source_label": "CICBD Small Business Expo",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-2e2dddbce23f805e0fef/",
+     "qualification": "The date is confirmed; start/end times and admission price are not stated in the captured text. Exhibitor applications closed 13 September. Confirm attendance details."
+    }
+   ],
+   "seconds_per_slide": 6,
+   "duration": 36
+  },
+  "essentials": {
+   "slides": [
+    {
+     "headline": "DEH Monday collection reference",
+     "value": "Check",
+     "value_prefix": "",
+     "label": "West Bay and West Bay Road.",
+     "source_url": "https://gov.ky/web/deh/waste-collection",
+     "source_label": "DEH residential waste collection",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-86a3ea46c732dedd59d4/",
+     "qualification": "Evergreen DEH area schedule, not a guaranteed next pickup. Put waste out the night before; Grand Cayman crews start at 3 am. Verify changes with DEH."
+    },
+    {
+     "headline": "DEH Tuesday collection reference",
+     "value": "Check",
+     "value_prefix": "",
+     "label": "South Church Street, Walkers Road, Smith Road, Templeton Pine Lake, Shedden Road, North Sound Road, Industrial Park, Breezy Way, Eastern Avenue, Mary’s Street, Rock Hole and side roads.",
+     "source_url": "https://gov.ky/web/deh/waste-collection",
+     "source_label": "DEH residential waste collection",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-7065ffcccd09645e8b6d/",
+     "qualification": "Evergreen DEH area schedule, not a guaranteed next pickup. Put waste out the night before; Grand Cayman crews start at 3 am. Verify changes with DEH."
+    },
+    {
+     "headline": "DEH Wednesday collection reference",
+     "value": "Check",
+     "value_prefix": "",
+     "label": "Windsor Park, South Sound, Crewe Road, Bobby Thompson Way, Half Way Pond, Randyke Gardens, Prospect Point Road, Prospect and Patrick Island.",
+     "source_url": "https://gov.ky/web/deh/waste-collection",
+     "source_label": "DEH residential waste collection",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-d4f3f044fb0885dd6370/",
+     "qualification": "Evergreen DEH area schedule, not a guaranteed next pickup. Put waste out the night before; Grand Cayman crews start at 3 am. Verify changes with DEH."
+    },
+    {
+     "headline": "DEH Thursday collection reference",
+     "value": "Check",
+     "value_prefix": "",
+     "label": "Shamrock Road/Prospect Point Road junction to Will T Drive, including Savannah, Newlands and homes off the East West Arterial.",
+     "source_url": "https://gov.ky/web/deh/waste-collection",
+     "source_label": "DEH residential waste collection",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-d0072f5e8e38cdffeeac/",
+     "qualification": "Evergreen DEH area schedule, not a guaranteed next pickup. Put waste out the night before; Grand Cayman crews start at 3 am. Verify changes with DEH."
+    },
+    {
+     "headline": "DEH Friday collection reference",
+     "value": "Check",
+     "value_prefix": "",
+     "label": "Will T Drive eastward, including Northward, Bodden Town, North Side, East End and side roads.",
+     "source_url": "https://gov.ky/web/deh/waste-collection",
+     "source_label": "DEH residential waste collection",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-31aa50acb6bab93fa62c/",
+     "qualification": "Evergreen DEH area schedule, not a guaranteed next pickup. Put waste out the night before; Grand Cayman crews start at 3 am. Verify changes with DEH."
+    },
+    {
+     "headline": "Cayman Brac collection reference",
+     "value": "Check",
+     "value_prefix": "",
+     "label": "DEH publishes separate weekday routes for West End, Spot Bay, the Bluff and South Side.",
+     "source_url": "https://gov.ky/web/deh/waste-collection",
+     "source_label": "DEH residential waste collection",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-ab9ccb33fd22df728722/",
+     "qualification": "Check the exact street route in the official schedule; collection starts at 5 am. This is not a new dated collection announcement."
+    },
+    {
+     "headline": "Little Cayman collection reference",
+     "value": "Check",
+     "value_prefix": "",
+     "label": "The DEH schedule lists all locations on Monday and Wednesday.",
+     "source_url": "https://gov.ky/web/deh/waste-collection",
+     "source_label": "DEH residential waste collection",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-0f2e22ff9ef9950e82d5/",
+     "qualification": "Evergreen schedule; Sister Islands collection starts at 5 am. Put waste out beforehand and confirm changes with DEH."
+    },
+    {
+     "headline": "Importing a car? Model year eight years or older is prohibited",
+     "value": "Check",
+     "value_prefix": "",
+     "label": "Customs and Border Control reminded the public on 14 September that vehicles whose model year is eight years or older cannot be imported, subject to listed exemptions. It asks buyers to check before purchasing as the end of the year approaches.",
+     "source_url": "https://www.radiocayman.gov.ky/news/cbc-reminds-public-of-vehicle-import-restrictions",
+     "source_label": "Radio Cayman (Government): CBC Reminds Public of Vehicle Import Restrictions",
+     "source_date": "Published 14 Sep 2026",
+     "target_url": "/editions/2026-10-10/items/notice-a1b7d2357d9bb660335a/",
+     "qualification": "Exemptions are in Section 4A(2) of the Prohibited Goods Order; the release does not list them. Ask CBC before you buy."
+    }
+   ],
+   "seconds_per_slide": 6,
+   "duration": 48
+  },
+  "fine-print": {
+   "slides": [
+    {
+     "headline": "Scholarship dates disagree across official pages",
+     "value": "Check",
+     "value_prefix": "",
+     "label": "The dated April update announces a November–September cycle from 1 November 2026. The Ministry FAQ still shows the earlier overseas and local windows.",
+     "source_url": "https://gov.ky/web/govky/w/scholarship-application-deadlines-and-process-updated",
+     "source_label": "MoET scholarship cycle update",
+     "source_date": "Published 30 Apr 2026",
+     "target_url": "/editions/2026-10-10/items/notice-5dee3af63bf791d4e246/",
+     "qualification": "Revision comparison only. The public portal landing does not settle a programme-specific deadline; confirm directly before preparing an application."
+    },
+    {
+     "headline": "Gazette timetable and generic instructions differ",
+     "value": "Check",
+     "value_prefix": "",
+     "label": "The 2026 table and the general submission paragraph on the same official page give different deadline rules.",
+     "source_url": "https://gov.ky/web/gazettes/dates-and-deadlines",
+     "source_label": "2026 Gazette dates and deadlines",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-6a73f0a8a3915023cd5b/",
+     "qualification": "The dated 2026 table lists 16 October at noon for both sectors; the same page’s generic instructions use different weekday rules. Confirm with the Gazette Office before relying on this deadline."
+    }
+   ],
+   "seconds_per_slide": 6,
+   "duration": 12
+  },
+  "jobs": {
+   "slides": [
+    {
+     "headline": "Work worth a look.",
+     "value": "1,268",
+     "value_prefix": "",
+     "label": "Open WORC job posts",
+     "source_url": "https://my.egov.ky/web/myworc/find-a-job",
+     "source_label": "WORC public board",
+     "source_date": "Snapshot 10 Oct 2026",
+     "target_url": "/jobs/",
+     "qualification": "Posts are not positions. Check the advertised requirements and closing date."
+    },
+    {
+     "headline": "What the posts advertise.",
+     "value": "26,910.00",
+     "value_prefix": "CI$",
+     "label": "Median advertised annual pay",
+     "source_url": "https://my.egov.ky/web/myworc/find-a-job",
+     "source_label": "WORC public board",
+     "source_date": "Snapshot 10 Oct 2026",
+     "target_url": "/jobs/",
+     "qualification": "CI$ a year; middle of each advertised range. This is not take-home pay."
+    },
+    {
+     "headline": "Do not miss the closing date.",
+     "value": "184",
+     "value_prefix": "",
+     "label": "WORC posts closing within three days of the snapshot",
+     "source_url": "https://my.egov.ky/web/myworc/find-a-job",
+     "source_label": "WORC public board",
+     "source_date": "Snapshot 10 Oct 2026",
+     "target_url": "/jobs/",
+     "qualification": "This count is dated by the snapshot; use the current closing-date filter."
+    }
+   ],
+   "seconds_per_slide": 6,
+   "duration": 18
+  },
+  "fuel": {
+   "slides": [
+    {
+     "headline": "Your next fill-up.",
+     "value": "5.540",
+     "value_prefix": "CI$",
+     "label": "Lowest comparable self-service regular reading",
+     "source_url": "https://www.ofreg.ky/viewPDF/documents/2026-10-06-17-00-38-ReportsTuesday06October2026.pdf",
+     "source_label": "URCO weekly report",
+     "source_date": "Report 6 Oct 2026",
+     "target_url": "/fuel/",
+     "qualification": "Grand Cayman non-E10 road pumps only. CI$ per imperial gallon; check today’s pump price."
+    },
+    {
+     "headline": "Same fuel. Same basis.",
+     "value": "15",
+     "value_prefix": "",
+     "label": "Comparable regular pump readings",
+     "source_url": "https://www.ofreg.ky/viewPDF/documents/2026-10-06-17-00-38-ReportsTuesday06October2026.pdf",
+     "source_label": "URCO weekly report",
+     "source_date": "Report 6 Oct 2026",
+     "target_url": "/fuel/",
+     "qualification": "Self-service, non-E10, Grand Cayman. Full service, marinas and missing prices are excluded."
+    },
+    {
+     "headline": "AA REDBAY",
+     "value": "George Town",
+     "value_prefix": "",
+     "label": "Lowest reading in this comparison",
+     "source_url": "https://www.ofreg.ky/viewPDF/documents/2026-10-06-17-00-38-ReportsTuesday06October2026.pdf",
+     "source_label": "URCO weekly report",
+     "source_date": "Report 6 Oct 2026",
+     "target_url": "/fuel/",
+     "qualification": "A dated reported price; availability and travel cost are not measured."
+    }
+   ],
+   "seconds_per_slide": 6,
+   "duration": 18
+  },
+  "nearby": {
+   "slides": [
+    {
+     "headline": "Around your district.",
+     "value": "665",
+     "value_prefix": "",
+     "label": "Stored CPA and Sister Islands records",
+     "source_url": "https://www.planning.ky/wp-content/uploads/meetings/Acpa2326.pdf",
+     "source_label": "Planning source documents",
+     "source_date": "Meeting 14 Oct 2026",
+     "target_url": "/nearby/",
+     "qualification": "Records can be proposals or decisions. A decision is not proof construction has begun."
+    },
+    {
+     "headline": "Read the planning record.",
+     "value": "West Bay",
+     "value_prefix": "",
+     "label": "Application for a park",
+     "source_url": "https://www.planning.ky/wp-content/uploads/meetings/Acpa2326.pdf",
+     "source_label": "Planning source document",
+     "source_date": "Meeting 14 Oct 2026",
+     "target_url": "/editions/2026-10-10/planning/planning-cffd53757d3120b0407c/",
+     "qualification": "A recorded planning decision is not proof work has started or completed."
+    }
+   ],
+   "seconds_per_slide": 6,
+   "duration": 12
+  },
+  "archive": {
+   "slides": [
+    {
+     "headline": "The record stays.",
+     "value": "Search",
+     "value_prefix": "",
+     "label": "Dated editions, notices and source links",
+     "source_url": "https://n4mcayman.github.io/archive/",
+     "source_label": "n4m cayman",
+     "source_date": "Edition 10 Oct 2026",
+     "target_url": "/archive/",
+     "qualification": "Search covers the published archive. Past notices remain labelled as past."
+    }
+   ],
+   "seconds_per_slide": 6,
+   "duration": 6
+  },
+  "briefing": {
+   "slides": [
+    {
+     "headline": "Free shuttle now links East End and North Side",
+     "value": "Free",
+     "value_prefix": "",
+     "label": "The Eastern Link is a free four-month public transport pilot that started 1 October. It runs Monday to Saturday, 7:30 am to 7:30 pm, not on public holidays. If you transfer to an existing public bus, the normal bus fare applies.",
+     "source_url": "https://www.radiocayman.gov.ky/news/the-eastern-link-connecting-east-end-and-north-side-to-launch-1-october",
+     "source_label": "Radio Cayman (Government): The Eastern Link Connecting East End and North Side to Launch 1 October",
+     "source_date": "Published 29 Sep 2026",
+     "target_url": "/editions/2026-10-10/items/notice-e757c8e93cb0e745c3a2/",
+     "qualification": "The release names three services and Frank Sound Junction as the connection to existing buses; stop lists were attachments not shown on the page. No end date is given beyond four months. The four-month duration is stated, but an exact end date is not supplied."
+    },
+    {
+     "headline": "Your next fill-up.",
+     "value": "5.540",
+     "value_prefix": "CI$",
+     "label": "Lowest comparable self-service regular reading",
+     "source_url": "https://www.ofreg.ky/viewPDF/documents/2026-10-06-17-00-38-ReportsTuesday06October2026.pdf",
+     "source_label": "URCO weekly report",
+     "source_date": "Report 6 Oct 2026",
+     "target_url": "/fuel/",
+     "qualification": "Grand Cayman non-E10 road pumps only. CI$ per imperial gallon; check today’s pump price."
+    },
+    {
+     "headline": "Work worth a look.",
+     "value": "1,268",
+     "value_prefix": "",
+     "label": "Open WORC job posts",
+     "source_url": "https://my.egov.ky/web/myworc/find-a-job",
+     "source_label": "WORC public board",
+     "source_date": "Snapshot 10 Oct 2026",
+     "target_url": "/jobs/",
+     "qualification": "Posts are not positions. Check the advertised requirements and closing date."
+    },
+    {
+     "headline": "National Recognition nominations now close on Sunday 11 October",
+     "value": "11 Oct 2026",
+     "value_prefix": "",
+     "label": "The official page now gives the deadline for submissions as 11:59 pm on Sunday 11 October 2026. It was Sunday 4 October.",
+     "source_url": "https://gov.ky/web/mysch/national-recognition-awards",
+     "source_label": "National Recognition Awards",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-28469300b1ed824cb407/",
+     "qualification": "The source says nominations received after the deadline cannot be considered."
+    },
+    {
+     "headline": "CSC 2027 registration deadline: 20 November",
+     "value": "20 Nov 2026",
+     "value_prefix": "",
+     "label": "The Civil Service College registration page lists 20 November 2026 for programmes starting in 2027, including leadership and workplace digital skills.",
+     "source_url": "https://gov.ky/en/web/csc/registration",
+     "source_label": "Civil Service College 2027 registration",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-7280dcaf5e725506d5bb/",
+     "qualification": "Confirmed calendar date only; closing hour is not stated. Confirm admission, employment eligibility, course cost and the relevant programme before applying."
+    },
+    {
+     "headline": "Electricity fuel-charge cap and fuel duty waiver now run to 31 December",
+     "value": "31 Dec 2026",
+     "value_prefix": "",
+     "label": "Government extended the 2026 Fuel Relief Programme by three months. The residential electricity fuel charge stays capped at CI$0.18 per kWh, and the 100% import-duty waiver on gasoline, diesel and propane continues.",
+     "source_url": "https://www.radiocayman.gov.ky/news/government-extends-fuel-relief-programme-through-december-2026",
+     "source_label": "Radio Cayman (Government): Government extends fuel relief programme through December 2026",
+     "source_date": "Published 29 Sep 2026",
+     "target_url": "/editions/2026-10-10/items/notice-d8edb116518bc7c4664c/",
+     "qualification": "The waiver removes the Government duty; it does not set or freeze pump prices. The release's example saving is about $70.44 a month on 1,200 kWh at September's fuel rate."
+    },
+    {
+     "headline": "Duty-free allowance is CI$800 now and CI$1,000 from 23 November",
+     "value": "7 Jan 2027",
+     "value_prefix": "",
+     "label": "The standard allowance for returning residents rose from CI$500 to CI$800 on 1 September. A temporary CI$1,000 allowance applies for Christmas travel, 23 November 2026 to 7 January 2027, then CI$800 resumes on 8 January.",
+     "source_url": "https://gov.ky/w/cabinet-approves-increased-duty-allowances-for-returning-residents",
+     "source_label": "GOV.KY: Cabinet Approves Increased Duty Allowances for Returning Residents",
+     "source_date": "Checked 10 Oct 2026",
+     "target_url": "/editions/2026-10-10/items/notice-8bd6288b9b001acfcf1e/",
+     "qualification": "For the summer window the release said the higher allowance applied at the discretion of Customs and Border Control. Check declaration rules with CBC before you travel."
+    },
+    {
+     "headline": "Government schools are closed to students from Thursday 15 to Friday 23 October",
+     "value": "23 Oct 2026",
+     "value_prefix": "",
+     "label": "Two teacher training days on 15 and 16 October run straight into the half-term break of 19 to 23 October. That is seven school days in a row with no classes.",
+     "source_url": "https://gov.ky/w/cayman-islands-government-schools-2026-2027-school-calendar",
+     "source_label": "GOV.KY: Cayman Islands Government Schools 2026-2027 School Calendar (approved April 2026)",
+     "source_date": "Published 30 Apr 2026",
+     "target_url": "/editions/2026-10-10/items/notice-9688bbb7c79b803ac422/",
+     "qualification": "From the approved calendar PDF. The calendar lists no closure on Monday 26 October. Confirm with your child's school."
+    }
+   ],
+   "seconds_per_slide": 6,
+   "duration": 48
+  }
+ }
+}

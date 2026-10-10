@@ -1,0 +1,309 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//n4m cayman//Public deadlines//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:n4m cayman dates
+BEGIN:VEVENT
+UID:notice-28469300b1ed824cb407@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART:20261012T045900Z
+DTEND:20261012T051400Z
+SUMMARY:National Recognition nominations now close on Sunday 11 October
+DESCRIPTION:The official page now gives the deadline for submissions as 11:
+ 59 pm on Sunday 11 October 2026. It was Sunday 4 October.\nThe source says
+  nominations received after the deadline cannot be considered.
+URL:https://gov.ky/web/mysch/national-recognition-awards
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-7280dcaf5e725506d5bb@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:CSC 2027 registration deadline: 20 November
+DESCRIPTION:The Civil Service College registration page lists 20 November 2
+ 026 for programmes starting in 2027\, including leadership and workplace d
+ igital skills.\nConfirmed calendar date only\; closing hour is not stated.
+  Confirm admission\, employment eligibility\, course cost and the relevant
+  programme before applying.
+URL:https://gov.ky/en/web/csc/registration
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-d8edb116518bc7c4664c@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20270101
+SUMMARY:Electricity fuel-charge cap and fuel duty waiver now run to 31 Dece
+ mber
+DESCRIPTION:Government extended the 2026 Fuel Relief Programme by three mon
+ ths. The residential electricity fuel charge stays capped at CI$0.18 per k
+ Wh\, and the 100% import-duty waiver on gasoline\, diesel and propane cont
+ inues.\nThe waiver removes the Government duty\; it does not set or freeze
+  pump prices. The release's example saving is about $70.44 a month on 1\,2
+ 00 kWh at September's fuel rate.
+URL:https://www.radiocayman.gov.ky/news/government-extends-fuel-relief-prog
+ ramme-through-december-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-8bd6288b9b001acfcf1e@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20270108
+SUMMARY:Duty-free allowance is CI$800 now and CI$1\,000 from 23 November
+DESCRIPTION:The standard allowance for returning residents rose from CI$500
+  to CI$800 on 1 September. A temporary CI$1\,000 allowance applies for Chr
+ istmas travel\, 23 November 2026 to 7 January 2027\, then CI$800 resumes o
+ n 8 January.\nFor the summer window the release said the higher allowance 
+ applied at the discretion of Customs and Border Control. Check declaration
+  rules with CBC before you travel.
+URL:https://gov.ky/w/cabinet-approves-increased-duty-allowances-for-returni
+ ng-residents
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-e757c8e93cb0e745c3a2@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Free shuttle now links East End and North Side
+DESCRIPTION:The Eastern Link is a free four-month public transport pilot th
+ at started 1 October. It runs Monday to Saturday\, 7:30 am to 7:30 pm\, no
+ t on public holidays. If you transfer to an existing public bus\, the norm
+ al bus fare applies.\nThe release names three services and Frank Sound Jun
+ ction as the connection to existing buses\; stop lists were attachments no
+ t shown on the page. No end date is given beyond four months. The four-mon
+ th duration is stated\, but an exact end date is not supplied.
+URL:https://www.radiocayman.gov.ky/news/the-eastern-link-connecting-east-en
+ d-and-north-side-to-launch-1-october
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-9688bbb7c79b803ac422@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261024
+SUMMARY:Government schools are closed to students from Thursday 15 to Frida
+ y 23 October
+DESCRIPTION:Two teacher training days on 15 and 16 October run straight int
+ o the half-term break of 19 to 23 October. That is seven school days in a 
+ row with no classes.\nFrom the approved calendar PDF. The calendar lists n
+ o closure on Monday 26 October. Confirm with your child's school.
+URL:https://gov.ky/w/cayman-islands-government-schools-2026-2027-school-cal
+ endar
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-f16a6bcbf5819f88b776@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261229
+SUMMARY:Public holidays left this year: 9 November\, 25 December and 28 Dec
+ ember
+DESCRIPTION:Remembrance Day is Monday 9 November. Christmas Day is Friday 2
+ 5 December and Boxing Day is observed on Monday 28 December. Government of
+ fices close on public holidays.\nThe official 2026 list has no October pub
+ lic holiday. Check the Government list before treating another listing as 
+ an official holiday.
+URL:https://gov.ky/public-holidays
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-816917c94ced5c8ecce3@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:Cayman Airways' last nonstop New York flight is 19 October
+DESCRIPTION:The airline is ending its Grand Cayman to New York JFK nonstop 
+ service. The final flight operates on 19 October 2026.\nIf you hold a book
+ ing after 19 October\, check it with Cayman Airways. The release does not 
+ describe rebooking or refunds.
+URL:https://www.radiocayman.gov.ky/news/cayman-airways-to-conclude-its-new-
+ york-service-as-it-prepares-to-blaze-trails-in-new-markets
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-947461d7ca255837a1a4@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Police: never share your six-digit WhatsApp code
+DESCRIPTION:RCIPS says scammers are taking over local WhatsApp accounts by 
+ asking for the six-digit verification code\, then messaging the owner's co
+ ntacts for money. Turn on two-step verification\, and call the person befo
+ re sending money.\nThe advice to call the person first is ordinary caution
+ \, not a quote from the release.
+URL:https://www.radiocayman.gov.ky/news/police-warn-of-ongoing-whatsapp-imp
+ ersonation-scams
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-39529a6bfece049587af@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20260927
+DTEND;VALUE=DATE:20260928
+SUMMARY:Statistics Office interviewers are visiting about 2\,000 homes: ask
+  for the ESO ID card
+DESCRIPTION:The Fall Labour Force and Quality of Life surveys began on Sund
+ ay 27 September. Trained interviewers carry Economics and Statistics Offic
+ e ID cards. To check\, call the ESO on 516-3329 or 949-0940.\nThe notice g
+ ives no end date for fieldwork.
+URL:https://www.radiocayman.gov.ky/news/fall-2026-labour-force-survey-and-q
+ uality-of-life-survey-starts-sunday
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-dbf669145c1d176037f7@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20260902
+SUMMARY:Driving licence fees changed on 1 September: discounts for longer l
+ icences\, reduced fee at 65
+DESCRIPTION:Caymanians buying three-\, five- and ten-year licences get 10%\
+ , 15% and 20% off. Customers aged 65 or older qualify for the reduced fee\
+ , including non-Caymanian seniors. Non-Caymanian full licence fees are abo
+ ut three times the Caymanian rate\, down from the eight times first approv
+ ed.\nIf you think the wrong fee was applied\, go to a DVDL office with you
+ r receipt and ID. The release gives ratios and discounts\, not a full pric
+ e list.
+URL:https://www.radiocayman.gov.ky/news/revised-dvdl-fee-structure-effectiv
+ e-1-september-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-b7f49efc43dc9b177c82@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20260807
+DTEND;VALUE=DATE:20261121
+SUMMARY:Have your say on protecting George Town's Ironwood Forest by 20 Nov
+ ember
+DESCRIPTION:The National Conservation Council is asking for public comments
+  on protecting a 10.3-acre Crown parcel of dry forest in central George To
+ wn.\nThe page gives a closing date and no closing hour.
+URL:https://publicconsultation.gov.ky/department-of-environment/ironwood-fo
+ rest/
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-c7e3f1e98b4409728c59@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20260807
+DTEND;VALUE=DATE:20261121
+SUMMARY:Cayman Brac: comment on the proposed Bluff Lighthouse National Park
+  by 20 November
+DESCRIPTION:The National Conservation Council is asking for public comments
+  on protecting Crown parcels along the north-eastern Bluff\, including all
+  of Long Beach\, while keeping the area open for managed public access.\nT
+ he page gives a closing date and no closing hour.
+URL:https://publicconsultation.gov.ky/department-of-environment/cayman-brac
+ -lighthouse/
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-b22165a09218af331ee4@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261122
+SUMMARY:Pirates Week dates: Brac 30 to 31 October\, Grand Cayman 6 to 14 No
+ vember\, Little Cayman 20 to 21 November
+DESCRIPTION:The Minister reconfirmed the 2026 festival dates for all three 
+ islands. Road closures for the Grand Cayman events had not been published 
+ when this was checked.\nDates only. Event times\, costs and road closures 
+ are not stated in this festival release\; check current official event and
+  police notices.
+URL:https://www.radiocayman.gov.ky/news/pirates-week-2026-theme-revealed-sp
+ irits-gold-and-glory
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-c564d06b7887c310106a@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:New rules for bringing dogs and cats into Cayman took effect 1 Octo
+ ber
+DESCRIPTION:The Department of Agriculture revised the conditions for import
+ ing dogs and cats. If you travel with a pet or plan to bring one in\, chec
+ k the new requirements first. Contact the Department on 947-3090.\nThis en
+ try does not summarise the individual requirements. Read the advisory or a
+ sk the Department.
+URL:https://www.radiocayman.gov.ky/news/department-of-agriculture-issues-ad
+ visory-on-importation-conditions-for-dogs-and-cats-into-the-cayman-islands
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-483aac605c5723865954@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:Chamber's Mentoring Cayman needs mentors: apply by 30 October
+DESCRIPTION:The Chamber of Commerce pairs Year 11 students with professiona
+ ls for a six-month programme. It is accepting mentor applications for 2026
+ /27 until 30 October.\nA Chamber of Commerce programme\, carried by Radio 
+ Cayman. The application form link is in the release.
+URL:https://www.radiocayman.gov.ky/news/mentoring-cayman-seeks-mentors-to-h
+ elp-shape-the-future
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-1cf107bbc00312edd654@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261101
+SUMMARY:No-cost mammogram in October for CG BritCay Premier and Provident m
+ embers
+DESCRIPTION:The insurer says members of those two plans can get a mammogram
+  at Doctors Hospital with nothing to pay out of pocket during October\, wi
+ thout using their annual wellness allowance. Appointments are limited. The
+  booking number is in the insurer's notice\; say which plan you are on whe
+ n you call.\nA company's offer to its own policyholders\, carried by Radio
+  Cayman. Listed because it is a benefit members may not know they have\; i
+ t is not an advertisement or an endorsement.
+URL:https://www.radiocayman.gov.ky/news/cg-britcay-reintroduces-complimenta
+ ry-mammogram-initiative-for-breast-cancer-awareness-month-2026
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-f7522002c7c2393ed95a@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+SUMMARY:Water Authority rates went up 3% from 1 July
+DESCRIPTION:The first base-price change in seven years. For Grand Cayman ho
+ mes\, the first 12 cubic metres a month (about 3\,200 US gallons) went fro
+ m $4.34 to $4.47 per cubic metre.\nThe figure quoted is for the first cons
+ umption band in Grand Cayman only. Other bands and the Sister Islands are 
+ in the notice.
+URL:https://www.waterauthority.ky/water-authority-announces-base-price-adju
+ stment
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-c26763f003a02deb168f@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:George Town: water pipe works on Rockshire Drive until about early 
+ November
+DESCRIPTION:Water Authority works on Rockshire Drive started on 23 Septembe
+ r and are expected to last about six weeks\, depending on weather. Expect 
+ trenching and heavy equipment\, and brief water interruptions of under 30 
+ minutes when homes are switched to a temporary line and again to the new o
+ ne.\nThe six-week duration is approximate and depends on weather. Interrup
+ tions are described as brief connection events\, not a continuous outage.
+URL:https://www.waterauthority.ky/public-service-announcement-planned-works
+ -rockshire-drive-pipeline-upgrade-and-relaying-project
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-a735d1c8ac6a280854ce@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:WORC offices in Grand Cayman and Cayman Brac close on 30 October
+DESCRIPTION:WORC says its Grand Cayman and Cayman Brac offices will be clos
+ ed Friday\, 30 October\, for a staff event. Regular office hours resume Mo
+ nday\, 2 November.\nThe notice says regular hours resume on 2 November but
+  does not state alternate service arrangements.
+URL:https://gov.ky/noticeboard
+END:VEVENT
+BEGIN:VEVENT
+UID:notice-97781e4fc6ea6d90b1b4@n4mcayman.github.io
+DTSTAMP:20261010T123902Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261205
+SUMMARY:No school for students on Friday 4 December\; term ends 18 December
+  at 1 pm
+DESCRIPTION:4 December is a system-wide teacher training day. Government sc
+ hools close for Christmas on 18 December\, when students leave at 1:00 pm.
+  Term 2 starts on 4 January 2027.\n4 December is the single-day closure in
+  this calendar entry\; 18 December is the separate term-end date. The appr
+ oved PDF also gives a 4 January 2027 reopening. Confirm with your child's 
+ school.
+URL:https://gov.ky/w/cayman-islands-government-schools-2026-2027-school-cal
+ endar
+END:VEVENT
+END:VCALENDAR
