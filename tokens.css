@@ -1,0 +1,34 @@
+@font-face { font-family:"Newsreader"; src:url("fonts/newsreader-latin.woff2") format("woff2"); font-style:normal; font-weight:200 800; font-display:swap; }
+@font-face { font-family:"Geist"; src:url("fonts/geist-latin.woff2") format("woff2"); font-style:normal; font-weight:100 900; font-display:swap; }
+@font-face { font-family:"Geist Mono"; src:url("fonts/geist-mono-latin.woff2") format("woff2"); font-style:normal; font-weight:100 900; font-display:swap; }
+:root {
+  --color-paper: #0f2622;
+  --color-ink: #efe6d2;
+  --color-ink-2: #b9c3b6;
+  --color-ink-3: #8fa29a;
+  --color-accent: #ff7a59;
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-text: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-brand: "Dela Gothic One", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist", system-ui, sans-serif;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-notice-groups: 20px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-look-phone: 96px;
+  --space-look-desktop: 160px;
+  --text-label: 12px;
+  --text-body: 16px;
+  --text-hero-phone: clamp(64px, 18vw, 88px);
+  --text-hero-desktop: clamp(120px, 12vw, 180px);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --dur-reveal: 650ms;
+}
+
+:root { --ground:var(--color-paper); --ground-2:color-mix(in srgb,var(--color-ink) 4%,var(--color-paper)); --surface:var(--ground-2); --ink:var(--color-ink); --ink-2:var(--color-ink-2); --ink-3:var(--color-ink-3); --build:var(--color-accent); --pump:var(--color-accent); --work:var(--color-accent); --port:var(--color-accent); --rule:color-mix(in srgb,var(--color-ink) 22%,var(--color-paper)); --hair:var(--rule); }
+
+:root { --mono:var(--font-text); }
