@@ -1,0 +1,348 @@
+# Cayman Watch: pull every source, rebuild the page and the weekly video, publish to GitHub Pages, then check
+# the published build on iPhone, Android and desktop browsers.
+#
+# Runs every day at 07:00 Cayman time (UTC-5 all year, no daylight saving), so each weekly source is picked up
+# within a day of publication: URCO's fuel report on Tuesdays, the planning board every two weeks, WORC jobs and
+# the Port Authority schedule daily.
+#
+# The deploy depends only on the build. The phone/desktop QA job runs beside it: a QA failure never holds back
+# fresh numbers, but it turns the run red so somebody looks.
+
+name: Update and publish
+
+on:
+  schedule:
+    - cron: '0 12 * * *'   # 12:00 UTC = 07:00 in the Cayman Islands
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: 'Also fetch the longer fuel history (six listing pages instead of two)'
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - watch.py
+      - template.html
+      - charts.js
+      - 'video/**'
+      - 'qa/**'
+      - '.github/**'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  TZ: America/Cayman          # watch.py stamps times with the local clock; make that clock Cayman's
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install pdftotext and ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils ffmpeg
+          pdftotext -v 2>&1 | head -1
+          ffmpeg -version | head -1
+
+      - name: Install Python packages
+        run: python -m pip install --upgrade pillow
+
+      - name: Week of the year (cache key)
+        id: week
+        run: echo "key=$(date -u +%G-W%V)" >> "$GITHUB_OUTPUT"
+
+      # Downloaded PDFs and their text are kept between runs so nothing is fetched twice. The saved key carries a
+      # hash of the documents on disk, so a new cache is written only when a new document arrived (or a new week
+      # began); every other run restores the newest one and saves nothing.
+      - name: Restore downloaded documents
+        id: cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/raw
+            data/text
+          key: documents-v1-${{ steps.week.outputs.key }}
+          restore-keys: |
+            documents-v1-${{ steps.week.outputs.key }}-
+            documents-v1-
+
+      - name: Pull every source and build the page
+        id: update
+        env:
+          MATCHED: ${{ steps.cache.outputs.cache-matched-key }}
+          BACKFILL: ${{ inputs.backfill }}
+        run: |
+          flags=""
+          if [ -z "$MATCHED" ] || [ "$BACKFILL" = "true" ]; then
+            flags="--backfill"
+            echo "::notice::No cached documents (or backfill asked for): fetching the longer fuel history."
+          fi
+          # Same as 'python watch.py update'. watch.py looks for pdftotext at fixed Windows paths, so on this
+          # Linux runner point it at the poppler-utils binary before running.
+          python - $flags <<'PY'
+          import shutil, sys
+          from pathlib import Path
+          sys.argv = ["watch.py", "update"] + sys.argv[1:]
+          import watch
+          if getattr(watch, "PDFTOTEXT", "unset") is None and shutil.which("pdftotext"):
+              watch.PDFTOTEXT = Path(shutil.which("pdftotext"))
+              print(f"pdftotext: {watch.PDFTOTEXT}")
+          sys.exit(watch.main(sys.argv))
+          PY
+
+      - name: Fingerprint the documents on disk
+        id: docs
+        if: ${{ !cancelled() }}
+        run: |
+          mkdir -p data/raw/cpa data/raw/fuel data/raw/jobs data/raw/ships data/text
+          # only the newest job-board snapshot is read; keep two weeks of them, not a year
+          find data/raw/jobs -maxdepth 1 -name '*.json' | sort | head -n -14 | xargs -r rm -f --
+          hash=$(find data/raw/cpa data/raw/fuel data/text -type f \( -name '*.pdf' -o -name '*.txt' \) | sort | sha256sum | cut -c1-16)
+          echo "key=documents-v1-${{ steps.week.outputs.key }}-$hash" >> "$GITHUB_OUTPUT"
+          du -sh data/raw data/text
+
+      - name: Save downloaded documents for the next run
+        if: ${{ !cancelled() && steps.docs.outputs.key != '' && steps.docs.outputs.key != steps.cache.outputs.cache-matched-key }}
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            data/raw
+            data/text
+          key: ${{ steps.docs.outputs.key }}
+
+      - name: Fetch fonts for the video (Bricolage Grotesque, Public Sans)
+        continue-on-error: true   # video/recap.py falls back to other faces
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -m pip install --upgrade fonttools
+          python - <<'PY'
+          import json, os, urllib.parse, urllib.request
+          from pathlib import Path
+
+          OUT = Path("fonts"); OUT.mkdir(exist_ok=True)
+          RAW = "https://raw.githubusercontent.com/google/fonts/main/"
+          # google/fonts keeps one variable TTF per family, named with its axes in brackets.
+          WANT = {"ofl/bricolagegrotesque": ["BricolageGrotesque[opsz,wdth,wght].ttf", "OFL.txt"],
+                  "ofl/publicsans": ["PublicSans[wght].ttf", "PublicSans-Italic[wght].ttf"]}
+
+          def fetch(url, headers=None):
+              req = urllib.request.Request(url, headers={"User-Agent": "cayman-watch-ci", **(headers or {})})
+              with urllib.request.urlopen(req, timeout=60) as r:
+                  return r.read()
+
+          def listing(folder):
+              """The repository's own index of the folder, in case a file was renamed."""
+              h = {"Accept": "application/vnd.github+json"}
+              if os.environ.get("GH_TOKEN"):
+                  h["Authorization"] = "Bearer " + os.environ["GH_TOKEN"]
+              items = json.loads(fetch(f"https://api.github.com/repos/google/fonts/contents/{folder}", h))
+              return [i["name"] for i in items if i["name"].endswith(".ttf")]
+
+          for folder, names in WANT.items():
+              missing = []
+              for name in names:
+                  try:
+                      (OUT / name).write_bytes(fetch(RAW + folder + "/" + urllib.parse.quote(name)))
+                  except Exception as e:
+                      print(f"{folder}/{name}: {e}")
+                      missing.append(name)
+              if any(n.endswith(".ttf") for n in missing):
+                  try:
+                      for name in listing(folder):
+                          if not (OUT / name).exists():
+                              (OUT / name).write_bytes(fetch(RAW + folder + "/" + urllib.parse.quote(name)))
+                  except Exception as e:
+                      print(f"{folder} listing: {e}")
+
+          # Static cuts at the house settings, for tools that cannot set variable axes.
+          try:
+              from fontTools.ttLib import TTFont
+              from fontTools.varLib import instancer
+          except ImportError:
+              TTFont = None
+          CUTS = [("BricolageGrotesque[opsz,wdth,wght].ttf", "BricolageGrotesque-CondensedExtraBold.ttf", {"opsz": 96, "wdth": 75, "wght": 800}),
+                  ("BricolageGrotesque[opsz,wdth,wght].ttf", "BricolageGrotesque-CondensedMedium.ttf", {"opsz": 48, "wdth": 75, "wght": 500}),
+                  ("BricolageGrotesque[opsz,wdth,wght].ttf", "BricolageGrotesque-Medium.ttf", {"opsz": 48, "wdth": 100, "wght": 500}),
+                  ("PublicSans[wght].ttf", "PublicSans-Regular.ttf", {"wght": 400}),
+                  ("PublicSans[wght].ttf", "PublicSans-SemiBold.ttf", {"wght": 600})]
+          for src, dst, loc in CUTS if TTFont else []:
+              if not (OUT / src).exists():
+                  continue
+              try:
+                  font = TTFont(OUT / src)
+                  axes = {a.axisTag: (a.minValue, a.maxValue) for a in font["fvar"].axes}
+                  pin = {k: min(max(v, axes[k][0]), axes[k][1]) for k, v in loc.items() if k in axes}
+                  instancer.instantiateVariableFont(font, pin, inplace=True)
+                  font.save(OUT / dst)
+              except Exception as e:
+                  print(f"static cut {dst}: {e}")
+          for p in sorted(OUT.iterdir()):
+              print(f"{p.stat().st_size:>9}  fonts/{p.name}")
+          PY
+
+      - name: Make the weekly video
+        id: recap
+        continue-on-error: true   # a failed video must not hold back fresh numbers; QA reports the missing file
+        run: |
+          if [ -f video/recap.py ]; then
+            python video/recap.py
+          else
+            echo "::warning::video/recap.py is not in the repository; this build has no video."
+          fi
+
+      - name: Report a failed video
+        if: ${{ steps.recap.outcome == 'failure' }}
+        run: echo "::error::video/recap.py failed; the page is published without a fresh video. See the step above."
+
+      - name: Put the chart script beside the page
+        run: |
+          if [ -f charts.js ]; then cp charts.js site/charts.js; fi
+          ls -la site
+
+      - name: Check the build before publishing
+        run: |
+          python - <<'PY'
+          import json, os, sys
+          from pathlib import Path
+
+          page = Path("site/index.html")
+          if not page.exists() or "/*__WATCH_DATA__*/null" in page.read_text(encoding="utf-8"):
+              print("::error::site/index.html is missing or has no data built into it; the live page is left as it is.")
+              sys.exit(1)
+          d = json.loads(Path("data/watch.json").read_text(encoding="utf-8"))
+          have = {"fuel": len(d.get("fuel") or []), "planning": len(d.get("meetings") or []),
+                  "jobs": 1 if d.get("jobs") else 0, "ships": 1 if d.get("ships") else 0}
+          for k, n in have.items():
+              if not n:
+                  print(f"::warning::No {k} data in this build (the source may have refused the runner); see the update log.")
+          for name in ("recap.mp4", "recap.jpg"):
+              if not (Path("site") / name).exists():
+                  print(f"::warning::site/{name} was not made.")
+          lines = ["### Cayman Watch build", "",
+                   f"- generated {d.get('generated')} (Cayman time)",
+                   f"- fuel weeks: {have['fuel']}" + (f", latest {d['fuel'][-1]['week']}" if have['fuel'] else ""),
+                   f"- planning meetings: {have['planning']}, applications: {len(d.get('applications') or [])}",
+                   f"- jobs snapshot: {(d.get('jobs') or {}).get('taken', 'none')}",
+                   f"- ships week: {((d.get('ships') or {}).get('this') or {}).get('start', 'none')}",
+                   f"- site files: {', '.join(sorted(p.name for p in Path('site').iterdir()))}"]
+          if os.environ.get("GITHUB_STEP_SUMMARY"):
+              with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
+                  f.write("\n".join(lines) + "\n")
+          print("\n".join(lines))
+          if not any(have.values()):
+              print("::error::Nothing was measured; the live page is left as it is.")
+              sys.exit(1)
+          PY
+
+      # The week-on-week history lives in the repository, so it survives cache eviction. Only data/series is
+      # committed; raw downloads, text, logs and the built site never are.
+      - name: Keep the measured history (data/series)
+        if: ${{ github.ref == 'refs/heads/main' }}
+        continue-on-error: true
+        run: |
+          shopt -s nullglob
+          files=(data/series/*.json)
+          if [ ${#files[@]} -eq 0 ]; then echo "No series files."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "${files[@]}"
+          if git diff --cached --quiet; then echo "History unchanged."; exit 0; fi
+          git commit -m "Record measured history, $(date +%F)"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase --autostash origin main || git rebase --abort || true
+            sleep $((attempt * 5))
+          done
+          echo "::error::Could not push data/series; today's history point is not kept."
+          exit 1
+
+      - name: Package the site for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  qa:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch the built site
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: qa-artifact
+
+      - name: Unpack it
+        run: |
+          mkdir -p qa-site
+          tar -xf qa-artifact/artifact.tar -C qa-site
+          ls -la qa-site
+
+      - name: Serve it locally
+        run: |
+          nohup python -m http.server 8000 --directory qa-site > qa-server.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS -o /dev/null http://localhost:8000/; then echo "serving"; exit 0; fi
+            sleep 1
+          done
+          echo "::error::The local web server did not start."
+          cat qa-server.log
+          exit 1
+
+      - name: Install Playwright with Chromium and WebKit
+        run: |
+          python -m pip install --upgrade playwright
+          python -m playwright install --with-deps chromium webkit
+
+      - name: Check on iPhone 14, iPhone SE, Pixel 7 and desktop
+        run: python qa/mobile_check.py http://localhost:8000/
+
+      - name: Keep the screenshots
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-screenshots
+          path: qa/out/
+          if-no-files-found: warn
+          retention-days: 14
